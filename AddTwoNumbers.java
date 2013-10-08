@@ -63,7 +63,7 @@ public class Solution {
             if (root == null) root = newNode;
             l2 = l2.next;
         }
-        if (plusOne == 1) {
+        if (plusOne == 1) { // **important**
             value = 1;
             ListNode newNode = new ListNode(value);
             if (current != null)

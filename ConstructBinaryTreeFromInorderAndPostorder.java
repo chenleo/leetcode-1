@@ -28,7 +28,7 @@ public class Solution {
         if (pl == pr) return new TreeNode(postorder[pr]);
         
         int rootValue = postorder[pr];
-        
+
         // find rootIndex in inorder
         int rootIndex;
         for (rootIndex = il; rootIndex <= ir; rootIndex++) {
