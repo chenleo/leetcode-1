@@ -44,10 +44,10 @@ public class Solution {
     public ArrayList<TreeNode> generateTrees(int n) {
         // Start typing your Java solution below
         // DO NOT write main() function
-        return generateTreesLowHight(1, n);
+        return generateTreesLowHigh(1, n);
     }
     
-    public static ArrayList<TreeNode> generateTreesLowHight(int low, int high) {
+    public static ArrayList<TreeNode> generateTreesLowHigh(int low, int high) {
         int n = high - low + 1;
         ArrayList<TreeNode> res = new ArrayList<TreeNode>();
         
@@ -59,8 +59,8 @@ public class Solution {
         }
         else {
             for (int j = low; j <= high; j++) {
-                ArrayList<TreeNode> left = generateTreesLowHight(low, j - 1);
-                ArrayList<TreeNode> right = generateTreesLowHight(j + 1, high);
+                ArrayList<TreeNode> left = generateTreesLowHigh(low, j - 1);
+                ArrayList<TreeNode> right = generateTreesLowHigh(j + 1, high);
                 for (int k = 0; k < left.size(); k++) {
                     for (int h = 0; h < right.size(); h++) {
                         TreeNode root = new TreeNode(j);
